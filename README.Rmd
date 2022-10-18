@@ -127,15 +127,13 @@ dot arguments originally provided to the function.
 
 ```{r}
 f <- function(...) {
-  dots1 <- dots()
-  dots2 <- dots(...) # the same
-  dots3 <- dots(b = y)
-  dots4 <- dots(..., b = y)
+  dots1 <- dots(...)
+  dots2 <- dots(b = y)
+  dots3 <- dots(..., b = y)
   list(
-    dots1 = dots1,
-    dots2 = dots2,
-    dots3 = dots3,
-    dots4 = dots4
+    dots1 = dots2,
+    dots2 = dots3,
+    dots3 = dots4
   )
 }
 f(a = x)

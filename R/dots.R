@@ -39,7 +39,7 @@ dots_env <- function(x) {
 #' so we could define methods for it. Note that dots are lazy,
 #' their expression is not evaluated at the time of definition.
 #'
-#' @param ... arguments to gather, can be empty, can contain `...`
+#' @param ... arguments to gather, can contain `...`
 #' @param *env* environment in which to evaluate the dots
 #'
 #' @export
@@ -61,7 +61,7 @@ dots_env <- function(x) {
 #' c(dots1, dots2)
 #'
 #' f <- function(...) {
-#'   dots3 <- dots(...) # the same
+#'   dots3 <- dots(...)
 #'   dots4 <- dots(b = y)
 #'   dots5 <- dots(..., b = y)
 #'   list(
@@ -73,7 +73,7 @@ dots_env <- function(x) {
 #' f(a = x)
 #'
 dots <- function(...) {
-  d <- if (missing(...)) get("...", parent.frame()) else environment()$...
+  d <- environment()$...
   class(d) <- "dots"
   d
 }
