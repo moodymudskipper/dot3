@@ -133,7 +133,7 @@ f <- function(...) {
   list(
     dots1 = dots2,
     dots2 = dots3,
-    dots3 = dots4
+    dots3 = dots3
   )
 }
 f(a = x)
@@ -146,7 +146,7 @@ unevaled promise).
 
 `enarg()` creates an unevaled promise from a one argument `"dots"` object,  *as a side effect*.
 
-These names are inspired to the `en*()` family of functions of {rlang} (`enquo()`, `enexpr()` etc).
+These names are inspired by the `en*()` family of functions of {rlang} (`enquo()`, `enexpr()` etc).
 
 
 ```{r, error = TRUE}

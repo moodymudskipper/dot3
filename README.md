@@ -140,34 +140,29 @@ manipulate the dot arguments originally provided to the function.
 
 ``` r
 f <- function(...) {
-  dots1 <- dots()
-  dots2 <- dots(...) # the same
-  dots3 <- dots(b = y)
-  dots4 <- dots(..., b = y)
+  dots1 <- dots(...)
+  dots2 <- dots(b = y)
+  dots3 <- dots(..., b = y)
   list(
-    dots1 = dots1,
-    dots2 = dots2,
-    dots3 = dots3,
-    dots4 = dots4
+    dots1 = dots2,
+    dots2 = dots3,
+    dots3 = dots3
   )
 }
 f(a = x)
 #> $dots1
 #> <dots> object
-#> ..1: R_GlobalEnv a = x
+#> ..1: 0x13ef316b8 b = y
 #> 
 #> $dots2
 #> <dots> object
 #> ..1: R_GlobalEnv a = x
+#> ..2: 0x13ef316b8 b = y
 #> 
 #> $dots3
 #> <dots> object
-#> ..1: 0x1231436e0 b = y
-#> 
-#> $dots4
-#> <dots> object
 #> ..1: R_GlobalEnv a = x
-#> ..2: 0x1231436e0 b = y
+#> ..2: 0x13ef316b8 b = y
 ```
 
 ## Convert arguments to/from dots
@@ -178,7 +173,7 @@ f(a = x)
 `enarg()` creates an unevaled promise from a one argument `"dots"`
 object, *as a side effect*.
 
-These names are inspired to the `en*()` family of functions of {rlang}
+These names are inspired by the `en*()` family of functions of {rlang}
 (`enquo()`, `enexpr()` etc).
 
 ``` r
@@ -188,7 +183,7 @@ f <- function(x) {
 }
 f(y+z)
 #> <dots> object
-#> ..1: 0x117c7b020 x = y + z
+#> ..1: 0x13c6410d0 x = y + z
 
 g <- function(...) {
   d <- dots(...)
