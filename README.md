@@ -53,7 +53,7 @@ with(list(... = d), data.frame(..., b=2))
 ```
 
 Arguments defined through dots are defined lazily (only evaled when
-needed), each of then has 3 important properties :
+needed), each of them has 3 important properties :
 
 -   a name (optional)
 -   an expression
@@ -162,12 +162,12 @@ f(a = x)
 #> 
 #> $dots3
 #> <dots> object
-#> ..1: 0x10582f368 b = y
+#> ..1: 0x1231436e0 b = y
 #> 
 #> $dots4
 #> <dots> object
 #> ..1: R_GlobalEnv a = x
-#> ..2: 0x10582f368 b = y
+#> ..2: 0x1231436e0 b = y
 ```
 
 ## Convert arguments to/from dots
@@ -188,7 +188,7 @@ f <- function(x) {
 }
 f(y+z)
 #> <dots> object
-#> ..1: 0x10419f1c0 x = y + z
+#> ..1: 0x117c7b020 x = y + z
 
 g <- function(...) {
   d <- dots(...)

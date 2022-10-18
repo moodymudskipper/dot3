@@ -57,7 +57,7 @@ with(list(... = d), data.frame(..., b=2))
 ```
 
 Arguments defined through dots are defined lazily (only evaled when needed),
-each of then has 3 important properties :
+each of them has 3 important properties :
 
 * a name (optional)
 * an expression
