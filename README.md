@@ -9,7 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-{dot3} providesß tools to manipulate the ellipsis object, also known as
+{dot3} provides tools to manipulate the ellipsis object, also known as
 dots (`...`).
 
 ## Installation
@@ -162,12 +162,12 @@ f(a = x)
 #> 
 #> $dots3
 #> <dots> object
-#> ..1: 0x122526c20 b = y
+#> ..1: 0x10582f368 b = y
 #> 
 #> $dots4
 #> <dots> object
 #> ..1: R_GlobalEnv a = x
-#> ..2: 0x122526c20 b = y
+#> ..2: 0x10582f368 b = y
 ```
 
 ## Convert arguments to/from dots
@@ -188,7 +188,7 @@ f <- function(x) {
 }
 f(y+z)
 #> <dots> object
-#> ..1: 0x142c24e78 x = y + z
+#> ..1: 0x10419f1c0 x = y + z
 
 g <- function(...) {
   d <- dots(...)

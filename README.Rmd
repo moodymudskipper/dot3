@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-{dot3} providesß tools to manipulate the ellipsis object, also known as dots (`...`).
+{dot3} provides tools to manipulate the ellipsis object, also known as dots (`...`).
 
 ## Installation
 
