@@ -12,3 +12,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Imports: 
     rlang
+URL: https://github.com/moodymudskipper/dot3
+BugReports: https://github.com/moodymudskipper/dot3/issues
