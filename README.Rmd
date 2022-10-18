@@ -131,8 +131,8 @@ f <- function(...) {
   dots2 <- dots(b = y)
   dots3 <- dots(..., b = y)
   list(
-    dots1 = dots2,
-    dots2 = dots3,
+    dots1 = dots1,
+    dots2 = dots2,
     dots3 = dots3
   )
 }
@@ -170,7 +170,7 @@ try(g(x = 1, y = stop()))
 ## dots_expand
 
 This function is used to support the syntax `fun(... = alist())`,
-see example below :
+see example below:
 
 ```{r}
 subset2 <- function(...) {

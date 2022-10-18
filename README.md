@@ -144,25 +144,24 @@ f <- function(...) {
   dots2 <- dots(b = y)
   dots3 <- dots(..., b = y)
   list(
-    dots1 = dots2,
-    dots2 = dots3,
+    dots1 = dots1,
+    dots2 = dots2,
     dots3 = dots3
   )
 }
 f(a = x)
 #> $dots1
 #> <dots> object
-#> ..1: 0x13ef316b8 b = y
+#> ..1: R_GlobalEnv a = x
 #> 
 #> $dots2
 #> <dots> object
-#> ..1: R_GlobalEnv a = x
-#> ..2: 0x13ef316b8 b = y
+#> ..1: 0x149e7f3e8 b = y
 #> 
 #> $dots3
 #> <dots> object
 #> ..1: R_GlobalEnv a = x
-#> ..2: 0x13ef316b8 b = y
+#> ..2: 0x149e7f3e8 b = y
 ```
 
 ## Convert arguments to/from dots
@@ -183,7 +182,7 @@ f <- function(x) {
 }
 f(y+z)
 #> <dots> object
-#> ..1: 0x13c6410d0 x = y + z
+#> ..1: 0x1487a2208 x = y + z
 
 g <- function(...) {
   d <- dots(...)
@@ -203,7 +202,7 @@ try(g(x = 1, y = stop()))
 ## dots_expand
 
 This function is used to support the syntax `fun(... = alist())`, see
-example below :
+example below:
 
 ``` r
 subset2 <- function(...) {
